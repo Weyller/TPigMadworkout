@@ -9,11 +9,27 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--watch -->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="igMadworkout_WatchKit_App" customModuleProvider="target"/>
+                <controller identifier="watch " id="AgC-eL-Hgc" customClass="InterfaceController" customModule="igMadworkout_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" height="11" alignment="left" id="nfO-TI-5Cj"/>
+                        <label width="150" alignment="left" text="Today's Workout" id="bTg-T2-G3I">
+                            <color key="textColor" red="1" green="0.88309246190000001" blue="0.10832097860000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <table alignment="left" backgroundImage="logo" id="wZ2-CF-uwr">
+                            <items>
+                                <tableRow id="iQl-do-hqR">
+                                    <group key="rootItem" width="1" height="145" alignment="left" id="Yhm-Zh-bI0"/>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <color key="backgroundColor" red="0.2474435364" green="0.36043326570000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </controller>
             </objects>
+            <point key="canvasLocation" x="127.28205128205128" y="123.35897435897436"/>
         </scene>
     </scenes>
 </document>
