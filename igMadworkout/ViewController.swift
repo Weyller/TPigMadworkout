@@ -34,6 +34,7 @@ class ViewController: UIViewController, WCSessionDelegate
     @IBOutlet weak var thePickerView: UIPickerView!
     @IBOutlet weak var theRepsField: UITextField!
     @IBOutlet weak var theSetsField: UITextField!
+  //  @IBOutlet weak var theSetsField: UITextField!
     @IBOutlet weak var theScrollView: UIScrollView!
     @IBOutlet weak var theSynchButton: UIButton!
     var exerciseAccount: UserDefaults = UserDefaults.standard
@@ -60,10 +61,10 @@ class ViewController: UIViewController, WCSessionDelegate
             }
         }
         
-        self.theExercise = ""
-        Shared.sharedInstance.saveOrLoadUserDefaults("db")
-        self.thePickerView.selectRow(0, inComponent: 0, animated: false)
-        self.saveUserDefaultIfNeeded()
+         self.theExercise = ""
+         Shared.sharedInstance.saveOrLoadUserDefaults("db")
+       self.thePickerView.selectRow(0, inComponent: 0, animated: false)
+         self.saveUserDefaultIfNeeded()
     }
     // ============================
     override func didReceiveMemoryWarning()
@@ -152,8 +153,7 @@ class ViewController: UIViewController, WCSessionDelegate
         }
         
         let titleData = anArrayOfString[row]
-        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Caviar Dreams", size: 18.0)!,
-                                                                         NSForegroundColorAttributeName:UIColor.white])
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Caviar Dreams", size: 18.0)!,                                                                         NSForegroundColorAttributeName:UIColor.white])
         pickerLabel.textAlignment = NSTextAlignment.center
         pickerLabel.attributedText = myTitle
         
