@@ -80,16 +80,66 @@ class ViewController: UIViewController, WCSessionDelegate
     // ============================
     @IBAction func sendToWatch(_ sender: AnyObject)
     {
-        let databaseToSendToWatch = Shared.sharedInstance.getDatabase("db")
-        session.sendMessage(databaseToSendToWatch, replyHandler:
-            { replyMessage in },
-                            errorHandler:
-            {
-                error in
-                // catch any errors here
-                print(error)
-        })
+        var dictToSendWatch: [String : String] = [:]
+        
+        for aWorkout in Shared.sharedInstance.theDatabase {
+            
+            let aDate = aWorkout.0
+            let exercices = aWorkout.1
+            var str = ""
+            for i in 0..<exercices.count {
+                
+                let exerc = Array(exercices[i].keys)[0]
+                str += "\(exerc) : \(exercices[i][exerc]!)\n"
+            }
+            
+            dictToSendWatch[aDate] = str
+        }
+        
+        sendMessage(aDict : dictToSendWatch)
+        
+        
+//        let databaseToSendToWatch = Shared.sharedInstance.getDatabase("db")
+//        session.sendMessage(databaseToSendToWatch, replyHandler:
+//            { replyMessage in },
+//                            errorHandler:
+//            {
+//                error in
+//                // catch any errors here
+//                print(error)
+//        })
     }
+    //=============================
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler:
+        @escaping ([String : Any]) -> Void) {
+        
+        DispatchQueue.main.async {
+            () -> Void in 
+        }
+    }
+    
+    
+    
+    
+    //=============================
+    func sendMessage(aDict : [String : String]) {
+        //-----------
+        let messageToSend = ["Message" : aDict]
+        //-----------
+        session.sendMessage(messageToSend, replyHandler: {(replyMessage) in
+            
+            //---------------
+            DispatchQueue.main.async(execute: { () -> Void in
+            })
+            //---------------
+        }) { (error)
+            in print("error: \(error.localizedDescription)") }
+        
+    }
+    
+    
+    
     // ============================
     @IBAction func doneButton(_ sender: UIButton)
     {
