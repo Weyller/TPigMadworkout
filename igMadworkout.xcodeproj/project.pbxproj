@@ -25,6 +25,10 @@
 		9B3906281F1D0DDE00234551 /* icon_watch.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B3906221F1D0DDE00234551 /* icon_watch.png */; };
 		9B3906291F1D0DDE00234551 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B3906231F1D0DDE00234551 /* icon.png */; };
 		9B39062A1F1D0DDE00234551 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B3906241F1D0DDE00234551 /* logo.png */; };
+		9BBB98771F428C3700575FEC /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB98731F428C3700575FEC /* InfoView.swift */; };
+		9BBB98781F428C3700575FEC /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB98741F428C3700575FEC /* Shared.swift */; };
+		9BBB98791F428C3700575FEC /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB98751F428C3700575FEC /* TableViewController.swift */; };
+		9BBB987A1F428C3700575FEC /* WorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB98761F428C3700575FEC /* WorkoutsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +96,10 @@
 		9B3906221F1D0DDE00234551 /* icon_watch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_watch.png; path = Ressources/icon_watch.png; sourceTree = "<group>"; };
 		9B3906231F1D0DDE00234551 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = Ressources/icon.png; sourceTree = "<group>"; };
 		9B3906241F1D0DDE00234551 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = Ressources/logo.png; sourceTree = "<group>"; };
+		9BBB98731F428C3700575FEC /* InfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		9BBB98741F428C3700575FEC /* Shared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
+		9BBB98751F428C3700575FEC /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		9BBB98761F428C3700575FEC /* WorkoutsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +146,10 @@
 				9B39061E1F1D0DC400234551 /* Ressources */,
 				9B3905E71F1D099B00234551 /* AppDelegate.swift */,
 				9B3905E91F1D099B00234551 /* ViewController.swift */,
+				9BBB98731F428C3700575FEC /* InfoView.swift */,
+				9BBB98741F428C3700575FEC /* Shared.swift */,
+				9BBB98751F428C3700575FEC /* TableViewController.swift */,
+				9BBB98761F428C3700575FEC /* WorkoutsView.swift */,
 				9B3905EB1F1D099B00234551 /* Main.storyboard */,
 				9B3905EE1F1D099B00234551 /* Assets.xcassets */,
 				9B3905F01F1D099B00234551 /* LaunchScreen.storyboard */,
@@ -322,6 +334,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B3905EA1F1D099B00234551 /* ViewController.swift in Sources */,
+				9BBB98771F428C3700575FEC /* InfoView.swift in Sources */,
+				9BBB987A1F428C3700575FEC /* WorkoutsView.swift in Sources */,
+				9BBB98781F428C3700575FEC /* Shared.swift in Sources */,
+				9BBB98791F428C3700575FEC /* TableViewController.swift in Sources */,
 				9B3905E81F1D099B00234551 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -586,6 +602,7 @@
 				9B3906151F1D099C00234551 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B3906171F1D099C00234551 /* Build configuration list for PBXNativeTarget "igMadworkout WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -594,6 +611,7 @@
 				9B3906191F1D099C00234551 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B39061B1F1D099C00234551 /* Build configuration list for PBXNativeTarget "igMadworkout" */ = {
 			isa = XCConfigurationList;
@@ -602,6 +620,7 @@
 				9B39061D1F1D099C00234551 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
