@@ -29,6 +29,7 @@
 		9BBB98781F428C3700575FEC /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB98741F428C3700575FEC /* Shared.swift */; };
 		9BBB98791F428C3700575FEC /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB98751F428C3700575FEC /* TableViewController.swift */; };
 		9BBB987A1F428C3700575FEC /* WorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB98761F428C3700575FEC /* WorkoutsView.swift */; };
+		9BD2F6311F432D420046FE7E /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD2F6301F432D420046FE7E /* EditView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		9BBB98741F428C3700575FEC /* Shared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 		9BBB98751F428C3700575FEC /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		9BBB98761F428C3700575FEC /* WorkoutsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutsView.swift; sourceTree = "<group>"; };
+		9BD2F6301F432D420046FE7E /* EditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				9B3905E91F1D099B00234551 /* ViewController.swift */,
 				9BBB98731F428C3700575FEC /* InfoView.swift */,
 				9BBB98741F428C3700575FEC /* Shared.swift */,
+				9BD2F6301F432D420046FE7E /* EditView.swift */,
 				9BBB98751F428C3700575FEC /* TableViewController.swift */,
 				9BBB98761F428C3700575FEC /* WorkoutsView.swift */,
 				9B3905EB1F1D099B00234551 /* Main.storyboard */,
@@ -337,6 +340,7 @@
 				9BBB98771F428C3700575FEC /* InfoView.swift in Sources */,
 				9BBB987A1F428C3700575FEC /* WorkoutsView.swift in Sources */,
 				9BBB98781F428C3700575FEC /* Shared.swift in Sources */,
+				9BD2F6311F432D420046FE7E /* EditView.swift in Sources */,
 				9BBB98791F428C3700575FEC /* TableViewController.swift in Sources */,
 				9B3905E81F1D099B00234551 /* AppDelegate.swift in Sources */,
 			);

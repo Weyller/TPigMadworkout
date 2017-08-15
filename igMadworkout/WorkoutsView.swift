@@ -1,7 +1,7 @@
 // ============================
 import UIKit
 // ============================
-class WorkoutsView: UIViewController
+class WorkoutsView: UIViewController, UITableViewDelegate, UITableViewDataSource 
 {
     // ============================
     var theDatabase: [String : [[String : String]]]!
@@ -37,7 +37,7 @@ class WorkoutsView: UIViewController
         return self.theDatabase.count
     }
     // ============================
-    func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell:UITableViewCell = UITableViewCell(style:UITableViewCellStyle.default, reuseIdentifier:"cell")
         cell.textLabel!.font = UIFont(name: "Caviar Dreams", size: 18.0)
@@ -50,7 +50,7 @@ class WorkoutsView: UIViewController
         return cell
     }
     // ============================
-    func tableView(_ tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         let selectedCell:UITableViewCell = tableView.cellForRow(at: indexPath)!
         selectedCell.contentView.backgroundColor = UIColor.darkGray
@@ -58,7 +58,7 @@ class WorkoutsView: UIViewController
         performSegue(withIdentifier: "theSegway", sender: nil)
     }
     // ============================
-    func tableView(_ tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: IndexPath)
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
     {
         if editingStyle == UITableViewCellEditingStyle.delete
         {
