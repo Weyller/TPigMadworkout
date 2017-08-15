@@ -112,6 +112,10 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="216" id="qpy-c6-RSY"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="NNv-eU-4d2"/>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="00F-rX-wLf"/>
+                                                </connections>
                                             </pickerView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -300,6 +304,10 @@
                                 <rect key="frame" x="16" y="91" width="343" height="480"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ldN-eR-m6X" id="dwK-9H-E38"/>
+                                    <outlet property="delegate" destination="ldN-eR-m6X" id="USo-Si-qtW"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72F-N7-nPu">
                                 <rect key="frame" x="-4" y="587" width="94" height="80"/>
@@ -365,7 +373,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8zD-RQ-fyS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="898" y="231"/>
+            <point key="canvasLocation" x="1073" y="232"/>
         </scene>
         <!--Info View-->
         <scene sceneID="qBJ-p8-tzU">
@@ -431,6 +439,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h3s-8R-V0s">
                                 <rect key="frame" x="16" y="155" width="343" height="409"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="oQ4-g0-2iN" id="bYJ-7g-bR4"/>
+                                    <outlet property="delegate" destination="oQ4-g0-2iN" id="998-du-yxS"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ze3-ft-fhh">
                                 <rect key="frame" x="141" y="587" width="94" height="80"/>
@@ -578,7 +590,7 @@
         <image name="logo.png" width="240" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WG9-OT-pUx"/>
+        <segue reference="CFO-JV-OhA"/>
         <segue reference="aSa-9h-yfw"/>
     </inferredMetricsTieBreakers>
 </document>
