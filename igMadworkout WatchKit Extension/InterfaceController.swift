@@ -73,6 +73,37 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     //------------------------------------------------
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
         //----------------------------
+        let value = message["Message"] as? [String : String]
+        //----------------------------
+        DispatchQueue.main.async { () -> Void in
+            self.data = value!
+            UserDefaults.standard.set(self.data, forKey: "data")
+            self.dates = Array(value!.keys)
+            self.workouts = Array(value!.values)
+            self.tableRefresh()
+        }
+        //---------
+        //replyHandler(["Message" : conversation])
     }
+    //-----------------------------------------------
+    override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
+        self.pushController(withName: "page2", context: ["workout" : workouts[rowIndex]])
+    }
+    
 
 }
+//=================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+

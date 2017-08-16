@@ -17,7 +17,7 @@
                BlueprintIdentifier = "9B3905E31F1D099B00234551"
                BuildableName = "igMadworkout.app"
                BlueprintName = "igMadworkout"
-               ReferencedContainer = "container:igMadworkout.xcodeproj">
+               ReferencedContainer = "container:Madworkout.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "9B3905E31F1D099B00234551"
             BuildableName = "igMadworkout.app"
             BlueprintName = "igMadworkout"
-            ReferencedContainer = "container:igMadworkout.xcodeproj">
+            ReferencedContainer = "container:Madworkout.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,7 +58,7 @@
             BlueprintIdentifier = "9B3905E31F1D099B00234551"
             BuildableName = "igMadworkout.app"
             BlueprintName = "igMadworkout"
-            ReferencedContainer = "container:igMadworkout.xcodeproj">
+            ReferencedContainer = "container:Madworkout.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -77,7 +77,7 @@
             BlueprintIdentifier = "9B3905E31F1D099B00234551"
             BuildableName = "igMadworkout.app"
             BlueprintName = "igMadworkout"
-            ReferencedContainer = "container:igMadworkout.xcodeproj">
+            ReferencedContainer = "container:Madworkout.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
