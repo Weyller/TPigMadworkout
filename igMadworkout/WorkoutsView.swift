@@ -9,15 +9,17 @@ class WorkoutsView: UIViewController, UITableViewDelegate, UITableViewDataSource
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        self.theDatabase = Shared.sharedInstance.getDatabase("db")
+        
+       self.theDatabase = Shared.sharedInstance.getDatabase("db")
+
     }
     // ============================
     func getDates() -> [String]
     {
         var tempArray = [""]
         
-        for (a, _) in  self.theDatabase
-        {
+        
+        for (a, _) in  self.theDatabase.reversed() {
             tempArray.append(a)
         }
         

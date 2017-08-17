@@ -8,11 +8,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="CaviarDreams_Bold.ttf">
-            <string>CaviarDreams-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
@@ -28,7 +23,7 @@
                                     <group key="rootItem" width="1" alignment="left" id="cTD-0S-Ajh">
                                         <items>
                                             <label alignment="left" verticalAlignment="center" text="Dates" textAlignment="center" baselineAdjustment="alignCenters" id="AqG-Qs-QJe">
-                                                <fontDescription key="font" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="14"/>
+                                                <fontDescription key="font" type="system" pointSize="10"/>
                                             </label>
                                         </items>
                                     </group>
@@ -38,6 +33,7 @@
                                 </tableRow>
                             </items>
                         </table>
+                        <separator alignment="left" verticalAlignment="bottom" id="LEs-We-Hhk"/>
                     </items>
                     <color key="backgroundColor" red="0.2474435364" green="0.36043326570000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
@@ -55,8 +51,8 @@
                         <group width="1" height="5" alignment="left" id="stZ-ci-Yu9"/>
                         <imageView height="32" alignment="left" image="logo" id="v4H-vp-JD4"/>
                         <group width="1" height="5" alignment="left" id="i6w-fu-4Sy"/>
-                        <label width="150" height="19" alignment="left" text="Label" textAlignment="left" numberOfLines="100" id="xYn-FC-9mr">
-                            <fontDescription key="font" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="18"/>
+                        <label width="130" alignment="center" text="Label" numberOfLines="100" id="xYn-FC-9mr">
+                            <fontDescription key="font" type="system" pointSize="10"/>
                         </label>
                     </items>
                     <color key="backgroundColor" red="0.2474435364" green="0.36043326570000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -65,7 +61,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="185" y="112"/>
+            <point key="canvasLocation" x="184.82051282051285" y="111.15384615384616"/>
         </scene>
     </scenes>
 </document>
