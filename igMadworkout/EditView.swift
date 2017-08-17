@@ -15,6 +15,8 @@ class EditView: UIViewController, UITableViewDelegate, UITableViewDataSource
         super.viewDidLoad()
         self.exerciseAccountability = self.exerciseAccount.value(forKey: "exercises") as! [String : Int]
     }
+    
+    
     // ============================
     override func didReceiveMemoryWarning()
     {

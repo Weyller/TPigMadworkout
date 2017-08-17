@@ -20,7 +20,7 @@
                 <controller identifier="Interface Controller" id="AgC-eL-Hgc" userLabel="Interface Controller" customClass="InterfaceController" customModule="igMadworkout_WatchKit_App" customModuleProvider="target">
                     <items>
                         <group width="1" height="5" alignment="left" id="nfO-TI-5Cj"/>
-                        <imageView height="32" alignment="left" image="logo" id="eyX-1b-5Z5"/>
+                        <imageView height="32" alignment="center" image="logo" id="eyX-1b-5Z5"/>
                         <group width="1" height="5" alignment="left" id="GfS-OQ-fQR"/>
                         <table alignment="left" id="Awb-CX-zI2">
                             <items>

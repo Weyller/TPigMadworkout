@@ -96,6 +96,8 @@ class ViewController: UIViewController, WCSessionDelegate
             dictToSendWatch[aDate] = str
         }
         
+        print(dictToSendWatch)
+        
         sendMessage(aDict : dictToSendWatch)
         
         
@@ -126,6 +128,9 @@ class ViewController: UIViewController, WCSessionDelegate
     func sendMessage(aDict : [String : String]) {
         //-----------
         let messageToSend = ["Message" : aDict]
+        
+        print(aDict)
+        
         //-----------
         session.sendMessage(messageToSend, replyHandler: {(replyMessage) in
             

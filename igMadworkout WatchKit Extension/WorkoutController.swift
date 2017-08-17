@@ -21,6 +21,7 @@ class WorkoutController: WKInterfaceController {
         let temp = context as? [String : String]
         
         displayLabel.setText(temp?["workout"])
+        
     }
     
     //---------------------

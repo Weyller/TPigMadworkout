@@ -118,7 +118,7 @@
                                                 </connections>
                                             </pickerView>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.60392156862745094" green="0.17254901960784313" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="jNZ-xy-6j9" firstAttribute="centerX" secondItem="HY8-A0-LyX" secondAttribute="centerX" constant="0.5" id="1Gr-gt-V0V"/>
                                             <constraint firstItem="QQc-xY-jbS" firstAttribute="top" secondItem="jNZ-xy-6j9" secondAttribute="bottom" constant="23" id="3md-0J-xp4"/>
@@ -174,6 +174,9 @@
                                         <state key="normal" title="SYNCH">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="sendToWatch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="igR-oK-9Zi"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7iA-MT-NW2">
                                         <rect key="frame" x="288" y="0.0" width="95" height="80"/>
