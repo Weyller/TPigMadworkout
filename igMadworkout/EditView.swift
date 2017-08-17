@@ -2,7 +2,7 @@
 import UIKit
 import Foundation
 // ============================
-class EditView: UIViewController, UITableViewDelegate, UITableViewDataSource 
+class EditView: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate
 {
     // ============================
     @IBOutlet weak var theTableView: UITableView!
@@ -14,7 +14,18 @@ class EditView: UIViewController, UITableViewDelegate, UITableViewDataSource
     {
         super.viewDidLoad()
         self.exerciseAccountability = self.exerciseAccount.value(forKey: "exercises") as! [String : Int]
+        
+        //-------------------
+        self.addExerciseField.delegate = self;
+        
     }
+    //=============================
+    
+    internal func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return false
+    }
+    
     
     
     // ============================
@@ -67,12 +78,7 @@ class EditView: UIViewController, UITableViewDelegate, UITableViewDataSource
             tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
         }
     }
-    //-------------
-    func textFieldShouldReturn(_ textField: UITextField!) -> Bool
-    {
-        textField.resignFirstResponder()
-        return true
-    }
+
     //-------------
     func mAlterts(_ theMessage: String)
     {
