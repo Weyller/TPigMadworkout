@@ -36,6 +36,9 @@ class ViewController: UIViewController, WCSessionDelegate
     @IBOutlet weak var theSetsField: UITextField!
     @IBOutlet weak var theScrollView: UIScrollView!
     @IBOutlet weak var theSynchButton: UIButton!
+    
+    
+    @IBOutlet weak var theSaveToClipBoardButton: UIButton!
     var exerciseAccount: UserDefaults = UserDefaults.standard
     var session: WCSession!
     // ============================
@@ -64,25 +67,31 @@ class ViewController: UIViewController, WCSessionDelegate
          Shared.sharedInstance.saveOrLoadUserDefaults("db")
        self.thePickerView.selectRow(0, inComponent: 0, animated: false)
          self.saveUserDefaultIfNeeded()
+        
+        //------------------------------------------------------
+        let threeTap = UITapGestureRecognizer(target: self, action:#selector(tapButtonXTimes))
+        threeTap.numberOfTapsRequired = 3
+        theSaveToClipBoardButton.addGestureRecognizer(threeTap)
+        
+       
     }
-    // ============================
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-    }
-    // ============================
-    @IBAction func saveToClipboard(_ sender: UIButton)
+    //------------------------------------------
+    func tapButtonXTimes()
     {
         let unSortedEcerciseKeys = Array(self.exerciseAccountability.keys)
         UIPasteboard.general.string = unSortedEcerciseKeys.joined(separator: ",")
         
         mAlterts("Saving to clipboard")
+        
     }
     
-  
     
-    
-    
+    // ============================
+    override func didReceiveMemoryWarning()
+    {
+        super.didReceiveMemoryWarning()
+    }
+   
     // ============================
     @IBAction func sendToWatch(_ sender: AnyObject)
     {
