@@ -34,7 +34,6 @@ class ViewController: UIViewController, WCSessionDelegate
     @IBOutlet weak var thePickerView: UIPickerView!
     @IBOutlet weak var theRepsField: UITextField!
     @IBOutlet weak var theSetsField: UITextField!
-  //  @IBOutlet weak var theSetsField: UITextField!
     @IBOutlet weak var theScrollView: UIScrollView!
     @IBOutlet weak var theSynchButton: UIButton!
     var exerciseAccount: UserDefaults = UserDefaults.standard
@@ -76,6 +75,8 @@ class ViewController: UIViewController, WCSessionDelegate
     {
         let unSortedEcerciseKeys = Array(self.exerciseAccountability.keys)
         UIPasteboard.general.string = unSortedEcerciseKeys.joined(separator: ",")
+        
+        mAlterts("Saving to clipboard")
     }
     
   
