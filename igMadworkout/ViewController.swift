@@ -77,6 +77,11 @@ class ViewController: UIViewController, WCSessionDelegate
         let unSortedEcerciseKeys = Array(self.exerciseAccountability.keys)
         UIPasteboard.general.string = unSortedEcerciseKeys.joined(separator: ",")
     }
+    
+  
+    
+    
+    
     // ============================
     @IBAction func sendToWatch(_ sender: AnyObject)
     {

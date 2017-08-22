@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch42" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -33,7 +33,6 @@
                                 </tableRow>
                             </items>
                         </table>
-                        <separator alignment="left" verticalAlignment="bottom" id="LEs-We-Hhk"/>
                     </items>
                     <color key="backgroundColor" red="0.2474435364" green="0.36043326570000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
@@ -41,7 +40,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-57" y="111"/>
+            <point key="canvasLocation" x="-5" y="111"/>
         </scene>
         <!--page2-->
         <scene sceneID="gg3-5M-Pv8">
