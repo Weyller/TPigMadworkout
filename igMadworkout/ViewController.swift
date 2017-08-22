@@ -13,22 +13,7 @@ class ViewController: UIViewController, WCSessionDelegate
 {
     
     
-    //===============================
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        //
-    }
-    
-    
-    func sessionDidDeactivate(_ session: WCSession) {
-        //
-    }
-    
-    
-    func sessionDidBecomeInactive(_ session: WCSession) {
-        //
-    }
-    
-    
+    //MARK: IBOutlet Declaration
     // ============================
     @IBOutlet weak var theDatePicker: UIDatePicker!
     @IBOutlet weak var thePickerView: UIPickerView!
@@ -36,16 +21,19 @@ class ViewController: UIViewController, WCSessionDelegate
     @IBOutlet weak var theSetsField: UITextField!
     @IBOutlet weak var theScrollView: UIScrollView!
     @IBOutlet weak var theSynchButton: UIButton!
-    
-    
     @IBOutlet weak var theSaveToClipBoardButton: UIButton!
+    //MARK: UserDefaults Variable
     var exerciseAccount: UserDefaults = UserDefaults.standard
+    //MARK: WCSession Variable
     var session: WCSession!
+    //MARK: Dictionary of exercices
     // ============================
     var exerciseAccountability = ["HEART: Treadmill" : 0, "LEGS: Laying Leg Press" : 0, "HAMSTRINGS: Laying Hamstring Curl" : 0, "HAMSTRINGS: Seated Hamstring Curls" : 0, "CALVES: Calf Press" : 0, "CALVES: Seated Calf Raise" : 0, "QUADS: Leg Extension" : 0, "INNER THIGH: Adductor" : 0, "GLUTES: Abductor" : 0, "GLUTES: Glute Kickback" : 0, "CHEST: Chest Press" : 0, "CHEST: Plated Chess Press" : 0, "CHEST: Pec Tec" : 0, "BACK: Cable Low Rows" : 0, "BACK: Cable Nose Pulls" : 0, "CHEST: Cable Flyes" : 0, "LATS: Lateral Pull-Downs" : 0, "ABS: Ab Cruch Machine" : 0, "LEGS: Standing Leg Press" : 0, "BACK: Rear Delt Flyes" : 0, "CHEST: Inclined Chess Press" : 0, "CHEST: Dumbell Flyes" : 0, "BICEPS: Preacher Curl" : 0, "BICEPS: Independant Bicep Curl" : 0, "TRICEPS: Tricep Pull-Down" : 0, "BICEPS: Cable Row Bicep Curls" : 0, "TRICEPS: Cable Row Pull-Downs" : 0, "TRICEPS: Bar Pull-Downs" : 0, "BICEPS: Overhead Cable Curls" : 0, "TRICEPS: Assisted Dips" : 0, "LATS: Assisted Pull-Ups" : 0, "BACK: Bentover Dumbell Rows" : 0, "BICEPS: Dumbell Curls" : 0, "TRICEPS: Dumbell Kickbacks" : 0, "BICEPS: Barbell Curls" : 0, "TRICEPS: Skull Crushers" : 0, "TRICEPS: French Presses" : 0, "SHOULDERS: Arnold Presses" : 0, "SHOULDERS: Overhead Presses" : 0, "SHOULDERS: Hammer Flyes" : 0, "SHOULDERS: Cable Upward Rows" : 0, "SHOULDERS: Barbell Upward Rows" : 0, "SHOULDERS: Cable Lateral Raises" : 0, "SHOULDERS: Dumbell Lateral Raises" : 0, "DELTS: Dumbell Forward Raises" : 0, "DELTS: Cable Forward Raises" : 0]
     
     var theDatabase: [String : [[String : String]]]!
     var theExercise: String!
+    
+    //MARK: viewDidLoad begins
     // ============================
     override func viewDidLoad()
     {
@@ -68,15 +56,16 @@ class ViewController: UIViewController, WCSessionDelegate
        self.thePickerView.selectRow(0, inComponent: 0, animated: false)
          self.saveUserDefaultIfNeeded()
         
+        // Tap Gesture Recogniser script
         //------------------------------------------------------
-        let threeTap = UITapGestureRecognizer(target: self, action:#selector(tapButtonXTimes))
+        let threeTap = UITapGestureRecognizer(target: self, action:#selector(saveToClipBoard))
         threeTap.numberOfTapsRequired = 3
         theSaveToClipBoardButton.addGestureRecognizer(threeTap)
         
        
-    }
+    }//Method to save the exercises to the Clipboard
     //------------------------------------------
-    func tapButtonXTimes()
+    func saveToClipBoard()
     {
         let unSortedEcerciseKeys = Array(self.exerciseAccountability.keys)
         UIPasteboard.general.string = unSortedEcerciseKeys.joined(separator: ",")
@@ -84,7 +73,6 @@ class ViewController: UIViewController, WCSessionDelegate
         mAlterts("Saving to clipboard")
         
     }
-    
     
     // ============================
     override func didReceiveMemoryWarning()
@@ -115,19 +103,26 @@ class ViewController: UIViewController, WCSessionDelegate
         
         sendMessage(aDict : dictToSendWatch)
         
-        
-//        let databaseToSendToWatch = Shared.sharedInstance.getDatabase("db")
-//        session.sendMessage(databaseToSendToWatch, replyHandler:
-//            { replyMessage in },
-//                            errorHandler:
-//            {
-//                error in
-//                // catch any errors here
-//                print(error)
-//        })
+
     }
-    //=============================
     
+    //MARK: Apple Watch delegate methods
+    //===============================
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        //
+    }
+    
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        //
+    }
+    
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        //
+    }
+
+        
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler:
         @escaping ([String : Any]) -> Void) {
         
@@ -135,9 +130,7 @@ class ViewController: UIViewController, WCSessionDelegate
             () -> Void in 
         }
     }
-    
-    
-    
+   
     
     //=============================
     func sendMessage(aDict : [String : String]) {
@@ -201,6 +194,7 @@ class ViewController: UIViewController, WCSessionDelegate
         
         return true
     }
+    //MARK: Methods for PickerView
     // ============================
     func numberOfComponentsInPickerView(_ pickerView: UIPickerView) -> Int
     {
@@ -250,6 +244,7 @@ class ViewController: UIViewController, WCSessionDelegate
         
         self.theExercise = anArrayOfString[row]
     }
+    //MARK: Methods for datePicker
     // ============================
     func datePickerChanged(_ datePicker:UIDatePicker) -> String
     {
@@ -258,16 +253,21 @@ class ViewController: UIViewController, WCSessionDelegate
         let strDate = dateFormatter.string(from: datePicker.date)
         return strDate
     }
+    
+    // Method to add the number of set for an exercise
     // ============================
     @IBAction func addSetButton(_ sender: UIButton)
     {
         self.addExercise()
     }
+    // Method to hide keyboard after edit an exercise
     // ============================
     @IBAction func hideKeyboard(_ sender: UIButton)
     {
         self.view.endEditing(true)
     }
+    //MARK: Exercise set builder
+    // Method that puts together an exercise set along with the date
     // ============================
     fileprivate func addExercise()
     {
@@ -304,6 +304,7 @@ class ViewController: UIViewController, WCSessionDelegate
         self.accountForExercise(theExercise!)
         self.mAlterts(self.displayWorkout(theDate))
     }
+    // Method that will account for number of time an exercice is choosen
     // ============================
     fileprivate func accountForExercise(_ exerciseName: String)
     {
@@ -313,6 +314,8 @@ class ViewController: UIViewController, WCSessionDelegate
         self.exerciseAccount.setValue(self.exerciseAccountability, forKey: "exercises")
         self.thePickerView.reloadAllComponents()
     }
+    //MARK: Alert Method
+    // Custom alert method for differents alert message
     // ============================
     func mAlterts(_ theMessage: String)
     {
@@ -322,6 +325,7 @@ class ViewController: UIViewController, WCSessionDelegate
         
         self.present(alertController, animated: true, completion: nil)
     }
+    // Displays the exrcices in String format
     // ============================
     func displayWorkout(_ theDate: String) -> String
     {
@@ -345,7 +349,8 @@ class ViewController: UIViewController, WCSessionDelegate
     }
     // ============================
 }
-
+//MARK: Extension for Date
+// Extension for date formatting
 extension Date
 {
     
@@ -359,14 +364,7 @@ extension Date
 }
 
 
-    //=====================================
-    
-//    @IBAction func hideKeyboard(_ sender: UIButton) {
-//        
-//        self.view.endEditing(true)
-//    }
-
-    
+  //=====================================
 
 
 
