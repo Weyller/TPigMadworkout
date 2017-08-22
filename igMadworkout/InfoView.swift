@@ -22,6 +22,9 @@ class InfoView: UIViewController, UITableViewDelegate, UITableViewDataSource
         
        
         self.theWorkout = self.fillUpWorkoutArray(self.infoDateLabel.text!)
+        
+        
+        
     }
     // ============================
     @IBAction func reorder(_ sender: UIButton)

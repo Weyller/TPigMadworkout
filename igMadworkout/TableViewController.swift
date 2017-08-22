@@ -15,6 +15,7 @@ class TableViewController: UITableViewController
         
         self.theDatabase = Shared.sharedInstance.getDatabase("db")
         self.theWorkout = self.fillUpWorkoutArray(self.getDates()[Shared.sharedInstance.theRow])
+        print("the database \(theDatabase)")
     }
      /* -------------------------------- */
     func getDates() -> [String]
