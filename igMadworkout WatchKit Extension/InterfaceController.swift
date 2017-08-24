@@ -8,6 +8,7 @@ import WatchConnectivity
 
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
 
+    // MARK: Variable Declaration
     //----------------------------------------
     @IBOutlet var table: WKInterfaceTable!
     //----------------------------------------
@@ -19,6 +20,8 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     var session: WCSession!
     //------------------------------------------------
+    
+    // Method to manage userDefaults
     func userDefaultmanager() {
         
         if UserDefaults.standard.object(forKey: "data") == nil {
@@ -28,6 +31,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             data = UserDefaults.standard.object(forKey: "data") as! [String : String]
         }
     }
+    // Method to reload data in view
     //------------------------------------------------
     func tableRefresh() {
         
@@ -38,6 +42,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         }
     }
     
+    // MARK: Methods for Watch
     //------------------------------------------------
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -70,6 +75,8 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         //...code
     }
+    
+    // MARK: Method for Watch session
     //------------------------------------------------
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
         //----------------------------

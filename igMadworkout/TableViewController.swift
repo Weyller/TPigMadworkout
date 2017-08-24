@@ -3,10 +3,12 @@ import UIKit
 // ============================
 class TableViewController: UITableViewController
 {
+    // MARK: Variable Declaration
     /* -------------------------------- */
     var theDatabase: [String : [[String : String]]]!
     var theWorkout: [String]!
      /* -------------------------------- */
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -17,6 +19,8 @@ class TableViewController: UITableViewController
         self.theWorkout = self.fillUpWorkoutArray(self.getDates()[Shared.sharedInstance.theRow])
         print("the database \(theDatabase)")
     }
+    
+     // Methods that returns an array of dates
      /* -------------------------------- */
     func getDates() -> [String]
     {
@@ -31,6 +35,8 @@ class TableViewController: UITableViewController
         
         return tempArray
     }
+    
+     // Method to build an array of exercises
      /* -------------------------------- */
     func fillUpWorkoutArray(_ theDate: String) -> [String]
     {
@@ -57,6 +63,8 @@ class TableViewController: UITableViewController
     {
         super.didReceiveMemoryWarning()
     }
+    
+    // MARK: TableView Delegate and Datasource methods
     /* -------------------------------- */
     override func numberOfSections(in tableView: UITableView) -> Int
     {
@@ -101,14 +109,13 @@ class TableViewController: UITableViewController
     }
 
 
-
+    //----------------------
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to toIndexPath: IndexPath)
     {
-//        let itemToMove = self.theWorkout[fromIndexPath.row]
-//        self.theWorkout.removeAtIndex(fromIndexPath.row)
-//        self.theWorkout.insert(itemToMove, atIndex: toIndexPath.row)
-    }
 
+    }
+    // Method that remove an exercise from Dictionary of exercices
+    //-----------------------
     func deleteFromDatabase(_ theDate: String, indexToDelete: Int)
     {
         for (a, b) in self.theDatabase
@@ -125,7 +132,7 @@ class TableViewController: UITableViewController
         }
     }
 
-
+    //-------------------
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool
     {
         // Return false if you do not want the item to be re-orderable.

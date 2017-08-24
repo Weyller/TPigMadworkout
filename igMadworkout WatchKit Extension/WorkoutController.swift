@@ -5,7 +5,7 @@ import Foundation
 
 class WorkoutController: WKInterfaceController {
     
-    
+    //---------- View to display the exercices
     @IBOutlet var displayLabel: WKInterfaceLabel!
     
     //---------------------

@@ -3,12 +3,15 @@ import UIKit
 // ============================
 class InfoView: UIViewController, UITableViewDelegate, UITableViewDataSource 
 {
+    
+    //MARK: Variables Declaration
     // ============================
     @IBOutlet weak var infoDateLabel: UILabel!
     @IBOutlet weak var theTableView: UITableView!
     @IBOutlet weak var reorderButton: UIButton!
     var theDatabase: [String : [[String : String]]]!
     var theWorkout: [String]!
+    
     // ============================
     override func viewDidLoad()
     {
@@ -26,6 +29,7 @@ class InfoView: UIViewController, UITableViewDelegate, UITableViewDataSource
         
         
     }
+    //Action button for edition of tableView
     // ============================
     @IBAction func reorder(_ sender: UIButton)
     {
@@ -40,11 +44,11 @@ class InfoView: UIViewController, UITableViewDelegate, UITableViewDataSource
             self.reorderButton.setTitle("EDIT", for: UIControlState())
         }
     }
+    // Method to build an array of exercises
     // ============================
     func fillUpWorkoutArray(_ theDate: String) -> [String]
     {
-        print("Debug ??? ")
-
+        
         var arrToReturn: [String] = []
         
         for (a, b) in self.theDatabase
@@ -63,6 +67,7 @@ class InfoView: UIViewController, UITableViewDelegate, UITableViewDataSource
         
         return arrToReturn
     }
+    // Methods that returns an array of dates
     // ============================
     func getDates() -> [String]
     {
@@ -82,6 +87,8 @@ class InfoView: UIViewController, UITableViewDelegate, UITableViewDataSource
     {
         super.didReceiveMemoryWarning()
     }
+    
+    // MARK: TableView Delegate and Datasource methods
     // ============================
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
@@ -110,6 +117,22 @@ class InfoView: UIViewController, UITableViewDelegate, UITableViewDataSource
             tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
         }
     }
+        // ============================
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool
+    {
+        // Return false if you do not want the item to be re-orderable.
+        return true
+    }
+    // ============================
+    func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to toIndexPath: IndexPath)
+    {
+        let itemToMove = self.theDatabase[self.infoDateLabel.text!]?[fromIndexPath.row]
+        self.theDatabase[self.infoDateLabel.text!]?.remove(at: fromIndexPath.row)
+        self.theDatabase[self.infoDateLabel.text!]?.insert(itemToMove!, at: toIndexPath.row)
+        Shared.sharedInstance.saveDatabase(self.theDatabase)
+    }
+    
+    // Method that remove an exercise from Dictionary of exercices
     // ============================
     func deleteFromDatabase(_ theDate: String, indexToDelete: Int)
     {
@@ -126,24 +149,11 @@ class InfoView: UIViewController, UITableViewDelegate, UITableViewDataSource
             }
         }
     }
-    // ============================
-    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool
-    {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    // ============================
-    func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to toIndexPath: IndexPath)
-    {
-        let itemToMove = self.theDatabase[self.infoDateLabel.text!]?[fromIndexPath.row]
-        self.theDatabase[self.infoDateLabel.text!]?.remove(at: fromIndexPath.row)
-        self.theDatabase[self.infoDateLabel.text!]?.insert(itemToMove!, at: toIndexPath.row)
-        Shared.sharedInstance.saveDatabase(self.theDatabase)
-    }
-    // ============================
+
+    //--------------------------
+
 }
-
-
+//============================================
 
 
 

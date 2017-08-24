@@ -2,14 +2,17 @@
 import UIKit
 import Foundation
 // ============================
+
 class EditView: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate
 {
+    //MARK: Variables Declaratoin
     // ============================
     @IBOutlet weak var theTableView: UITableView!
     @IBOutlet weak var addExerciseField: UITextField!
     var exerciseAccount: UserDefaults = UserDefaults.standard
     var exerciseAccountability: [String : Int]!
     // ============================
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -19,6 +22,8 @@ class EditView: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
         self.addExerciseField.delegate = self;
         
     }
+    // MARK: Close Keyboard
+    // Method to manage keyboard when done editing
     //=============================
     
     internal func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -33,6 +38,7 @@ class EditView: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     {
         super.didReceiveMemoryWarning()
     }
+    // Action button to add an exercice
     // ============================
     @IBAction func addExerciseButton(_ sender: UIButton)
     {
@@ -45,6 +51,8 @@ class EditView: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
             self.mAlterts("Exercise Added!")
         }
     }
+    
+    // MARK: TableView Delegate and Datasource methods
     // ============================
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
@@ -79,6 +87,7 @@ class EditView: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
         }
     }
 
+    // MARK: Alerts manager
     //-------------
     func mAlterts(_ theMessage: String)
     {

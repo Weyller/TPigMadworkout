@@ -3,9 +3,11 @@ import UIKit
 // ============================
 class WorkoutsView: UIViewController, UITableViewDelegate, UITableViewDataSource 
 {
+    // MARK: Variable Declaration
     // ============================
     var theDatabase: [String : [[String : String]]]!
     // ============================
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -13,6 +15,8 @@ class WorkoutsView: UIViewController, UITableViewDelegate, UITableViewDataSource
        self.theDatabase = Shared.sharedInstance.getDatabase("db")
 
     }
+   
+    // Methods that returns an array of dates
     // ============================
     func getDates() -> [String]
     {
@@ -32,6 +36,8 @@ class WorkoutsView: UIViewController, UITableViewDelegate, UITableViewDataSource
     {
         super.didReceiveMemoryWarning()
     }
+    
+    // MARK: TableView Delegate and Datasource methods
     // ============================
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
