@@ -5,12 +5,12 @@
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "98C51F48D80BE2487AEB77883F1FC905688F0689" : 9223372036854775807,
-    "2FA12690F12A68D8B91EA7491BA3FA0A7A187C8E" : 9223372036854775807
+    "935AC465C783028E39280F8C7313C2F1A67F3EFB" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1ADD0B07-1978-452A-8199-47516A9A36CF",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "98C51F48D80BE2487AEB77883F1FC905688F0689" : "TPigMadworkout\/",
-    "2FA12690F12A68D8B91EA7491BA3FA0A7A187C8E" : ""
+    "935AC465C783028E39280F8C7313C2F1A67F3EFB" : ""
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "Madworkout",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -19,7 +19,7 @@
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Weyller\/Swift---Playgrounds.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2FA12690F12A68D8B91EA7491BA3FA0A7A187C8E"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "935AC465C783028E39280F8C7313C2F1A67F3EFB"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Weyller\/TPigMadworkout.git",

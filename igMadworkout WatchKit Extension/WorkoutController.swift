@@ -1,14 +1,7 @@
-//
-//  WorkoutController.swift
-//  igMadworkout
-//
-//  Created by eleves on 2017-08-15.
-//  Copyright © 2017 w. All rights reserved.
-//
-
-
+//=========================
 import WatchKit
 import Foundation
+//=========================
 
 class WorkoutController: WKInterfaceController {
     
@@ -27,3 +20,4 @@ class WorkoutController: WKInterfaceController {
     //---------------------
     
 }
+//==========================

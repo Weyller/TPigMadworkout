@@ -1,12 +1,6 @@
-//
-//  ExtensionDelegate.swift
-//  igMadworkout WatchKit Extension
-//
-//  Created by eleves on 2017-07-17.
-//  Copyright © 2017 w. All rights reserved.
-//
-
+//=================
 import WatchKit
+//=================
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
