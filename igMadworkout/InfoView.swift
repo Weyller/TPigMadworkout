@@ -18,9 +18,7 @@ class InfoView: UIViewController, UITableViewDelegate, UITableViewDataSource
         super.viewDidLoad()
         self.theDatabase = Shared.sharedInstance.getDatabase("db")
         
-        print("Debug ??? \(self.getDates()[Shared.sharedInstance.theRow])")
-
-        
+               
         self.infoDateLabel.text = self.getDates()[Shared.sharedInstance.theRow]
         
        
